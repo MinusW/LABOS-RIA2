@@ -7,6 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     button.addEventListener("click", () => {
         count++;
-        counterElement.innerText = count; // Direct DOM update
+        counterElement.innerText = count.toString(); // Direct DOM update
     });
 });
