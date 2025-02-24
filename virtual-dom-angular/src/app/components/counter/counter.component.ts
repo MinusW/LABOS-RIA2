@@ -10,6 +10,6 @@ export class CounterComponent {
   count: number = 0;
 
   increment() {
-    this.count++;
+    //TODO
   }
 }
