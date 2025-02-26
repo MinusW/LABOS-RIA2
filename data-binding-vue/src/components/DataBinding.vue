@@ -1,43 +1,37 @@
 <script setup>
 import { ref } from 'vue'
 
-defineProps({
-  msg: String,
-})
-
-const count = ref(0)
+const name = ref('John Doe')
+const items = ref(['Item 1', 'Item 2', 'Item 3', 'Item 4'])
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+  <div id="name-container">
+    <p>{{ name }}</p>
   </div>
 
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Learn more about IDE Support for Vue in the
-    <a
-      href="https://vuejs.org/guide/scaling-up/tooling.html#ide-support"
-      target="_blank"
-      >Vue Docs Scaling up Guide</a
-    >.
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
+<ul id="items-container">
+  <li v-for="item in items" :key="item">{{ item }}</li>
+</ul>
 </template>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
+body {
+  font-family: Arial, sans-serif;
+  margin: 40px;
 }
+
+h1 {
+  color: #333;
+}
+
+#name-container {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+#items-container {
+  font-size: 18px;
+}
+
 </style>
