@@ -13,6 +13,8 @@ dist
 dist-ssr
 coverage
 *.local
+.angular
+.gitingore
 
 /cypress/videos/
 /cypress/screenshots/
@@ -28,3 +30,4 @@ coverage
 *.sw?
 
 *.tsbuildinfo
+.gitignore
